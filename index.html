@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usman Estate Management</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family:  sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-image: url('Head-office.webp');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #000000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    /* Navigation Menu */
+    .navbar {
+      background-color: #b8bb0e;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1e70c1;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1000;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .navbar a {
+        padding: 10px;
+      }
+    }
+
+    /* Section Styles */
+    section {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+      border-radius: 10px;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%; /* Circular shape */
+      object-fit: cover; /* Prevent image distortion */
+      margin: 10px auto;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    /* Phone Number Style */
+    .phone-number {
+      color: #1e70c1;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .phone-number:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Usman Estate Management</h1>
+    <p>Real Estate Experts for Rent & Sale</p>
+  </header>
+
+  <nav class="navbar">
+    <h2 style="color:white;">Menu</h2>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <div class="nav-links">
+      <a href="#about-us">About Us</a>
+      <a href="#properties">Properties</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="about-us">
+    <h2>About Us</h2>
+    <p>Welcome to Usman Estate Management. We specialize in providing exceptional real estate solutions, including property rent and sale.</p>
+  </section>
+
+  <section id="team">
+    <h2>Our Team</h2>
+    <div>
+      <h3>Usman Shahid (CEO)</h3>
+      <img src="th 1.png" alt="Usman Shahid">
+      <p>
+        Phone: <a href="tel:+9230004260292" class="phone-number">+92-300-4260292</a>
+      </p>
+    </div>
+    <div>
+      <h3>Sheikh Shahid (Manager)</h3>
+      <img src="wh.jpg" alt="Sheikh Shahid">
+      <p>
+        Phone: <a href="tel:+9230008020292" class="phone-number">+92-300-8020292</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="properties">
+    <h2>Available Properties</h2>
+    <img src="https://tse4.mm.bing.net/th?id=OIP.qXzZeZoyo2KuDTVuNusj1AHaES&pid=Api&P=0&h=220" alt="Office Location">
+    <p>Location: Near Old Head Office, Ali Commercial.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>
+      CEO: Usman Shahid<br>
+      Phone: <a href="tel:+9230004260292" class="phone-number">+92-300-4260292</a><br>
+      Manager: Sheikh Shahid<br>
+      Phone: <a href="tel:+9230008020292" class="phone-number">+92-300-8020292</a><br>
+      Location: Near Old Head Office, Ali Commercial.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Usman Estate Management. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('show');
+    }
+
+    function viewTeam() {
+      alert('Viewing team members.');
+    }
+  </script>
+</body>
+
+</html>
